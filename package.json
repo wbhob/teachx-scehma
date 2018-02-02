@@ -1,0 +1,16 @@
+{
+    "name": "teachx-schema",
+    "main": "./dist/index.js",
+    "author": "Wilson Hobbs",
+    "version": "0.0.1-34",
+    "types": "./dist/index.d.ts",
+    "scripts": {
+        "prepublish": "tsc"
+    },
+    "devDependencies": {
+        "typescript": "2.5.2"
+    },
+    "dependencies": {
+        "@types/mongodb": "^2.2.18"
+    }
+}
