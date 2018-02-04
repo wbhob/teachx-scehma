@@ -1,21 +1,25 @@
 import { Job } from './job'
 export class Project extends Job {
-    person: 'tutor' | 'expert' | 'field-trip' | 'other' = 'tutor';
-    other?: string;
-    number: number = 40;
-    location?: string;
+    duration = 2;
     expertType: 'guest' | 'expert' = 'guest';
+    location?: string;
+    number: number = 40;
+    other?: string;
+    person: 'tutor' | 'expert' | 'field-trip' | 'other' = 'tutor';
+    recurring = false;
 
     constructor(project?: Project) {
         super(project);
         this.type = 'instructional';
         if (project) {
             this.date = project.date;
-            this.person = project.person;
-            this.number = project.number;
-            this.location = project.location;
-            this.expertType = project.expertType;
             this.description = project.description;
+            this.duration = project.duration;
+            this.expertType = project.expertType;
+            this.location = project.location;
+            this.number = project.number;
+            this.person = project.person;
+            this.recurring = project.recurring;
         }
     }
 
